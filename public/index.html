@@ -9,6 +9,13 @@
     <div id="app">
       <h1>Favourite Countries</h1>
       <h2>Total World Population: {{totalPopulation}}</h2>
+      <div>
+        <h2>Country name and flag:</h2>
+        <select class="" name="">
+          <option v-for="country in countries" value="country.name">{{country.name}}</option>
+        </select>
+        <input type="submit" name="Submit country"/>
+      </div>
     </div>
   </body>
 </html>

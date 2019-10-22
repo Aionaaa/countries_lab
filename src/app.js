@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     computed: {
       totalPopulation: function() {
         return this.countries.reduce((runningTotal, country) => runningTotal + country.population, 0);
+      },
+      countryName: function() {
+        const nameArray = this.countries.map(this.countries.name)
+        console.log(nameArray);
       }
     },
     methods: {
