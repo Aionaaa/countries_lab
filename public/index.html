@@ -10,11 +10,12 @@
       <h1>Favourite Countries</h1>
       <h2>Total World Population: {{totalPopulation}}</h2>
       <div>
-        <h2>Country name and flag:</h2>
-        <select class="" name="">
-          <option v-for="country in countries" value="country.name">{{country.name}}</option>
+        <h2>Countries:</h2>
+        <select id="chosenCountry" v-on:change="selectCountry($event)">
+          <option v-for="(country, index) in countries" :value="index">{{country.name}}</option>
         </select>
-        <input type="submit" name="Submit country"/>
+        <h2>Countries Flag</h2>
+        <img id="chosenCountry" v-if="chosenCountry" :src="chosenCountry.flag">
       </div>
     </div>
   </body>
